@@ -1,4 +1,4 @@
-//package com.craftinginterpreters.lox;
+package com.craftinginterpreters.lox;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -130,7 +130,7 @@ break;
 identifier();
       }
         else {
-          lox.error(line, "Unexpected character.");
+          Lox.error(line, "Unexpected character.");
         }
         break;
     }
@@ -169,7 +169,7 @@ private void identifier() {
       advance();
     }
     if (isAtEnd()) {
-      lox.error(line, "Unterminated string.");
+      Lox.error(line, "Unterminated string.");
       return;
     }
     // The closing ".
